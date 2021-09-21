@@ -7,9 +7,9 @@ def display_board(board):
     clear_output()
     
     print(board[7]+" ¦ "+board[8]+" ¦ "+board[9])
-    print("---------")
+    print("----------")
     print(board[4]+" ¦ "+board[5]+" ¦ "+board[6])
-    print("---------")
+    print("----------")
     print(board[1]+" ¦ "+board[2]+" ¦ "+board[3])
        
     pass
@@ -75,8 +75,12 @@ def choose_first():
 #function to check whether a given position already has a marker in it or not
 
 def space_check(board, position):
-    return board[position] == "X" or "O"
-
+    if board[position] == "X":
+        return False
+    elif board[position] == "O":
+        return False
+    else:
+        return True
 
 
 #function to check whether board was full
@@ -102,7 +106,8 @@ def player_choice(board):
             if (space_check(board, next_pos)):
                 return next_pos
             else:
-                pass
+                print("I am sorry but that position is already occupied.")
+                pos = True
         else:
             pass
         
@@ -150,11 +155,19 @@ while True:
         p1_marker = p2_marker
         p2_marker = temp
     
-     #ready to play   
-    if input("Are you ready to play?") in ("no","NO"):
-        break
-    else:
-        pass
+     #ready to play
+    ready = input("Are you ready to play?") 
+    whatever = True
+    while whatever == True:   
+        if ready in ("no","NO"):
+            game_on = False
+        elif ready in ("Yes," "yes"):
+            whatever = False
+            continue
+        else:
+            whatever = True
+        
+    
     
 
     game_on = True
