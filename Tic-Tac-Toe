@@ -74,7 +74,7 @@ def choose_first():
 
 #function to check whether a given position already has a marker in it or not
 
-def space_check(empty_board, position):
+def space_check(board, position):
     return board[position] == "X" or "O"
 
 
@@ -166,6 +166,7 @@ while True:
         position = player_choice(empty_board)
         place_marker(empty_board, p1_marker, position)
         if win_check(empty_board, p1_marker) == True:
+            display_board(empty_board)
             print("Congratulations you WIN!")
             if replay() == True:
                 game_on = True
@@ -177,6 +178,7 @@ while True:
             pass
         
         if full_board_check(empty_board):
+            display_board(empty_board)
             print("It's a TIE!")
             if replay() == True:
                 game_on = True
@@ -192,6 +194,7 @@ while True:
         position = player_choice(empty_board)
         place_marker(empty_board, p2_marker, position)
         if win_check(empty_board, p2_marker) == True:
+            display_board(empty_board)
             print("Congratulations you WIN!")
             if replay() == True:
                 game_on = True
@@ -204,6 +207,7 @@ while True:
         
         
         if full_board_check(empty_board):
+            display_board(empty_board)
             print("It's a TIE!")
             if replay() == True:
                 game_on = True
