@@ -2,8 +2,7 @@ import random
 
 
 def rand_list(n):
-    array = [x for x in range(1, n)]
-    random.shuffle(array)
+    array = random.sample(range(1,10000), n)
     return array
 
 def bubblesort(random_list):
