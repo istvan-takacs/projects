@@ -2,14 +2,14 @@ import random
 
 
 def rand_list(n):
-    array = random.sample(range(1,10000), n)
+    array = [random.randint(1, n) for num in range(n)]
     return array
 
 def bubblesort(random_list):
     length = len(random_list) - 1
     for i in range(length):
         flag = 0
-        for num in range(length):
+        for num in range(length-i):
             if random_list[num] > random_list[num + 1]:
                 random_list[num], random_list[num + 1] = random_list[num + 1], random_list[num]
                 flag = 1
@@ -17,9 +17,6 @@ def bubblesort(random_list):
             break
     return random_list
 
-partial = rand_list(40)
-print(partial)
-result  = bubblesort(partial)
-print(result)
+print(bubblesort(rand_list(1000)))
 
 
