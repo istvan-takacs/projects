@@ -4,7 +4,7 @@ def rand_list(n):
     array = [random.randint(1, n) for num in range(n)]
     return array
 
-def insertion_sort(array):
+def insert_sort(array):
     for i in range(1, len(array)):
         key = array[i]
         j = i-1
@@ -16,7 +16,7 @@ def insertion_sort(array):
 
     return array
 
-print(insertion_sort(rand_list(5)))
+print(insert_sort(rand_list(5)))
 
 
 

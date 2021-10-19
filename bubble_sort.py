@@ -5,7 +5,7 @@ def rand_list(n):
     array = [random.randint(1, n) for num in range(n)]
     return array
 
-def bubblesort(random_list):
+def bubble_sort(random_list):
     length = len(random_list) - 1
     for i in range(length):
         flag = 0
@@ -17,6 +17,6 @@ def bubblesort(random_list):
             break
     return random_list
 
-print(bubblesort(rand_list(1000)))
+print(bubble_sort(rand_list(1000)))
 
 
