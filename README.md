@@ -1,3 +1,3 @@
 # Projects
 
-A collection of projects and side-projects that I have undertaken.
+A repository for the collections of projects and side-projects that I have undertaken.
